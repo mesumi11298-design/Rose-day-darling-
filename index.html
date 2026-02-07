@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Rose Day ❤️</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  background: radial-gradient(circle, #ffd1dc, #ff4f7b);
+  font-family: Arial, sans-serif;
+  overflow:hidden;
+}
+
+h1{
+  color:white;
+  margin-bottom:25px;
+  animation: fadeIn 2s ease forwards;
+}
+
+.scene{
+  position:relative;
+  width:260px;
+  height:260px;
+}
+
+#rose{
+  width:100%;
+  position:absolute;
+  z-index:2;
+  transform:scale(0.3);
+  opacity:0;
+  animation: roseOpen 5s ease forwards;
+}
+
+#photo{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  position:absolute;
+  top:55px;
+  left:55px;
+  z-index:1;
+  opacity:0;
+  animation: photoReveal 3s ease forwards;
+  animation-delay:4s;
+}
+
+@keyframes roseOpen{
+  0%{transform:scale(0.3);opacity:0;}
+  60%{transform:scale(1);opacity:1;}
+  100%{transform:scale(1.1);}
+}
+
+@keyframes photoReveal{
+  from{opacity:0;transform:scale(0.5);}
+  to{opacity:1;transform:scale(1);}
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌹 Happy Rose Day My Love 🌹</h1>
+
+<div class="scene">
+  <img id="rose" src="rose.png" alt="Rose">
+  <img id="photo" src="photo.jpg" alt="My Love">
+</div>
+
+</body>
+</html>
